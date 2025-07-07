@@ -23,15 +23,23 @@ PROCEDURE dot_product(v1, v2, REF ps)
 END PROCEDURE
 
 FUNCTION dot_product_function(v1, v2)
-    ps <- 0
+    ps = 0
     FOR i FROM 0 TO LENGTH(v1) - 1 DO
-        ps <- ps + v1[i] * v2[i]
+        ps = ps + v1[i] * v2[i]
     END FOR
     RETURN ps
 END FUNCTION
 
 FUNCTION are_vectors_orthogonal_function(v1, v2)
-    ps <- dot_product_function(v1, v2)
+    ps =g dot_product_function(v1, v2)
     RETURN ps == 0
-    
+
 END FUNCTION
+
+FUNCTION function_name(parameters) : return_type
+VAR
+    set_declarations
+BEGIN
+    set_instructions
+    RETURN value ;
+END
