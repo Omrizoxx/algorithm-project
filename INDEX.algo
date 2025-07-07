@@ -36,10 +36,3 @@ FUNCTION are_vectors_orthogonal_function(v1, v2)
 
 END FUNCTION
 
-FUNCTION function_name(parameters) : return_type
-VAR
-    set_declarations
-BEGIN
-    set_instructions
-    RETURN value ;
-END
