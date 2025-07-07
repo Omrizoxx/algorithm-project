@@ -1,0 +1,37 @@
+ALGORITHM sum_of_distinct_elements(set1, set2)
+    sum = 0
+    FOR EACH element IN set1 DO
+        IF element is NOT IN set2 THEN
+            sum = sum + element
+        END IF
+    END FOR
+    FOR EACH element IN set2 DO
+        IF element is NOT IN set1 THEN
+            sum = sum + element
+        END IF
+    END FOR
+
+    RETURN sum
+END ALGORITHM
+
+
+PROCEDURE dot_product(v1, v2, REF ps)
+    ps = 0
+    FOR i FROM 0 TO LENGTH(v1) - 1 DO
+        ps = ps + v1[i] * v2[i]
+    END FOR
+END PROCEDURE
+
+FUNCTION dot_product_function(v1, v2)
+    ps <- 0
+    FOR i FROM 0 TO LENGTH(v1) - 1 DO
+        ps <- ps + v1[i] * v2[i]
+    END FOR
+    RETURN ps
+END FUNCTION
+
+FUNCTION are_vectors_orthogonal_function(v1, v2)
+    ps <- dot_product_function(v1, v2)
+    RETURN ps == 0
+    
+END FUNCTION
